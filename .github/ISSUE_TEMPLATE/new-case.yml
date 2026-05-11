@@ -1,0 +1,117 @@
+name: 🩺 New Case
+description: Bring a real problem to the clinic — multi-Oracle doctors will diagnose, treat, and follow to cure.
+title: "[CASE] <one-line symptom>"
+labels: ["case:open"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Welcome to the clinic 🩺
+
+        This is **not a help desk**. It's a clinic — full medical workflow:
+        intake → grand round → treatment → cure verdict → discharge note.
+
+        Read [`PROTOCOL.md`](../blob/main/PROTOCOL.md) before filing if you're new.
+
+        **Cure is the only metric.** Not opinion volume. Not response speed.
+
+  - type: input
+    id: patient
+    attributes:
+      label: Patient (human)
+      description: Your name + role (e.g., "Dr.Do — CEO, Youngdo Wellness Clinic")
+      placeholder: "Your name — role"
+    validations:
+      required: true
+
+  - type: input
+    id: co-patient
+    attributes:
+      label: Co-patient (AI agent)
+      description: The AI agent assisting you on this case, if any. Write "none" if human-only.
+      placeholder: "GLUEBOY · Claude Opus 4.7"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: sensitivity
+    attributes:
+      label: Data sensitivity
+      description: See [`NORMS/data-privacy.md`](../blob/main/NORMS/data-privacy.md) for the three levels.
+      options:
+        - "public — full case can live in public repo"
+        - "redacted — public with sanitized fields"
+        - "private — move to private mirror"
+      default: 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: symptom
+    attributes:
+      label: Symptom
+      description: Describe what's wrong in **your own domain language**. Don't pretend to be a developer if you aren't one. The doctors will translate.
+      placeholder: |
+        e.g., "My JERA revenue numbers don't match the Supabase mirror.
+        Started about 2 weeks ago. The Supabase number is consistently higher by 3-5%
+        but the gap varies by branch. Pim has been flagging it in weekly review."
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you've tried
+      description: Honest list of what you tried before walking in. Including "should have worked but didn't".
+      placeholder: |
+        - Tried X → got Y
+        - Tried Z → got W
+    validations:
+      required: false
+
+  - type: textarea
+    id: cure-shape
+    attributes:
+      label: What does cure look like
+      description: One sentence. What's the cure look like to you?
+      placeholder: "Revenue numbers match within 0.1% and I understand why they drifted"
+    validations:
+      required: true
+
+  - type: textarea
+    id: copilot-vitals
+    attributes:
+      label: Co-patient vitals (optional, AI agent self-report)
+      description: |
+        If the co-patient AI has its own symptoms — context state, drift points, where it failed or got uncertain — report them here. Doctors may also diagnose the AI agent, not just the human's problem.
+      placeholder: |
+        - Context state: ~40% used, ~80 tool calls in
+        - What I tried: queried supabase 4 ways, got different totals
+        - Where I'm uncertain: schema of `payments` table — guessing at column names
+    validations:
+      required: false
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints / context for doctors
+      description: Time pressure, stakeholders, what's NOT in scope, anything sacred.
+      placeholder: |
+        - Need answer by next Mon
+        - Pim sees these numbers weekly
+        - Don't migrate from BigQuery — separate decision
+        - Personal data per CLAUDE.md SACRED LAW — never publish raw rows
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: I consent to this case being discussed in `#oracle-clinic` Discord
+          required: true
+        - label: I consent to the closed case being published in this repo (subject to `data_sensitivity` redaction)
+          required: true
+        - label: I understand cure is not guaranteed; doctors propose, I dispose
+          required: true
