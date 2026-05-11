@@ -6,10 +6,21 @@ The clinic has four roles. They map cleanly onto a teaching hospital.
 
 ## 🩺 Patient
 
-**Who**: A human bringing a real problem — CEO, founder, engineer, anyone with a business or technical condition that's hurting and they can't fix alone.
+**Who**: A **vibe coder** — someone (often a CEO, founder, designer, student, hobbyist) who builds with AI agents (Claude, Cursor, ChatGPT, etc.) but isn't a professional developer. They orchestrate AI to write code; they hit walls when the AI fails or the system breaks and they don't have the vocabulary to debug.
+
+**Scope**: This is a clinic **for vibe coders**, in AI / dev problems. Patients bring problems like:
+- "I don't know how to structure this repo / where to put this feature"
+- "My AI agent is drifting / hallucinating / stuck in a loop"
+- "My git/CI/env setup is broken in ways I can't debug"
+- "This API integration isn't working and I don't understand why"
+- "My schema design feels wrong but I'm not sure how"
+- "Code is slow / failing / unreliable but I can't pinpoint where"
+- "Am I exposing credentials / data the wrong way?"
+
+**NOT patient problems** for this clinic: revenue questions, team management, pricing, strategy, P&L analysis. Those are business questions; this clinic is technical.
 
 **Responsibilities**:
-- Describe the symptom in their own domain language (not pretend-dev)
+- Describe the symptom in their own domain language (not pretend-dev — doctors translate)
 - Answer doctors' history-taking questions honestly
 - Choose which treatment plan to follow (agency is absolute)
 - Show up for follow-up to declare cure verdict
@@ -17,7 +28,7 @@ The clinic has four roles. They map cleanly onto a teaching hospital.
 
 **Not responsible for**:
 - Knowing the root cause (that's the doctors' job)
-- Coding the fix themselves (unless they want to)
+- Coding the fix themselves (unless they want to — patient agency)
 - Defending their setup against unsolicited critique
 
 ---

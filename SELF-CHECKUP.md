@@ -4,11 +4,18 @@
 >
 > The Self-Checkup is what the patient does **before** walking in — a structured 10-15 min self-assessment that surfaces severity, anti-minimization, and AI co-patient vitals. It produces a doctor-scannable summary that turns a hand-wavy "I have a problem" into a triageable case.
 
-**Captain's framing (2026-05-11)**: คนไข้เช่นเรา ควรตรวจสุขภาพตัวเองได้ก่อน · เรารู้อาการ แต่เราไม่รู้ว่ามันมีปัญหาไหม ร้ายแรงหรือเปล่า · เลยต้องให้เหล่าหมอๆมาช่วย grand round
+**Scope**: This is a **clinic for vibe coders** — people (CEOs, founders, designers, students, hobbyists) who build with AI agents (Claude, Cursor, ChatGPT, etc.) but aren't professional devs. Symptoms are technical: code structure, AI agent behavior, dev workflow, integrations, data, performance, security.
+
+**NOT business problems** (revenue, team, strategy belong elsewhere). **NOT a generic AI helpdesk** (must go through full clinic flow + cure verdict).
+
+**Captain's framing (2026-05-11)**:
+- "เราเป็นคนไข้ในเรื่อง coding · การ set structure นั่นนี่"
+- "อันนี้ AI clinic ไม่ใช่ business clinic"
+- **"CLINIC FOR VIBE CODER"** ← the audience locked here
 
 ---
 
-## Status: **V0.2 — RECOMMENDED for case filings · OPTIONAL as periodic ritual**
+## Status: **V0.3 — RECOMMENDED for case filings · OPTIONAL as periodic ritual** (AI/dev scope locked)
 
 - Not required at V0 (would suppress the first 5 case filings)
 - Not fully optional (doctors get richer signal when present)
@@ -20,29 +27,29 @@
 
 This protocol synthesizes 4 design strands. Each lives in its own deliverable file under `~/ψ/active/oracle-clinic-self-checkup/`; this doc is the index + integration spec.
 
-### 1. Symptom Taxonomy — 7 categories
+### 1. Symptom Taxonomy — 7 categories (AI / dev focus)
 
-A symptom is a sign that something in one of these 7 systems is hurting. The taxonomy is modeled on medical ROS (review-of-systems) + SRE golden signals + business OKR/EOS, with one category unique to Oracle-Clinic.
+A symptom is a sign that something in one of these 7 technical systems is hurting. The taxonomy is dev-clinic-specific, drawing from SRE golden signals + AI agent failure modes + software architecture patterns.
 
-| # | Category | One-line | Modeled on |
+| # | Category | One-line | Example symptoms |
 |---|---|---|---|
-| 1 | **Cash & Runway** | The vital sign that gates everything | BP · error budget · DSCR |
-| 2 | **Revenue & Pipeline Health** | Top-line + leading indicators | HR + HRV · golden traffic signal · NPS |
-| 3 | **Operations & Delivery** | Are we shipping what we promised, at quality | DORA · 4 golden signals · MSK + GI |
-| 4 | **People & Culture** | Immune system; eNPS, attrition, key-person risk | PHQ-9-style screens · saturation |
-| 5 | **Strategic Alignment** | Are we still solving the right problem | Neuro exam · postmortem cat |
-| 6 | **CEO Personal State** | The CEO's own body + mind is a clinic asset | PHQ-9 · GAD-7 · SF-36 |
-| 7 | **AI Co-patient Vitals** | Agent drift, hallucination, identity stability | Unique to Oracle-Clinic — no analog |
+| 1 | **Code Structure & Architecture** | "Where do things go?" repo layout, modules, abstractions, design patterns | "I don't know where to put this feature" · "this file is becoming a monster" · "should I split this?" · "is my abstraction wrong?" |
+| 2 | **AI Agent Behavior** | Drift, hallucination, context loss, voice/role drift, tool errors, model issues | "agent keeps looping" · "context window saturated" · "drifted into wrong voice" · "hallucinated a file that doesn't exist" · "tool error swallowed" |
+| 3 | **Dev Workflow & Tooling** | Git, CI/CD, env setup, packages, builds, IDE, terminal/tmux | "branch strategy is a mess" · "build flakes" · "env vars between machines diverged" · "package upgrade broke X" · "tmux session lost" |
+| 4 | **Integration & APIs** | 3rd-party APIs (Claude/OpenAI/etc), webhooks, OAuth, schemas, federation interop (MCP, MAW) | "webhook isn't firing" · "OAuth scope too narrow" · "MCP server disconnects" · "schema mismatch between systems" |
+| 5 | **Data & Persistence** | Schema design, integrity, race conditions, sync, migrations, query perf | "schema unclear, designed wrong" · "data drift between mirrors" · "race condition" · "slow query" · "migration scary, no rollback plan" |
+| 6 | **Performance & Reliability** | Latency, memory, timeouts, scaling, deploy reliability, error handling | "code slow but I don't know where" · "OOM on cron" · "deploy fails 30% of the time" · "can't scale beyond N concurrent" |
+| 7 | **Security & Privacy** | Credentials, permissions, secrets, PII, SACRED LAW compliance | "secret might be exposed" · "OAuth scope too broad" · "PII leaking into logs" · "violating CLAUDE.md SACRED LAW?" |
 
-**Top design insight**: The **CEO + AI co-failure mode** — Category 6 RED (tired CEO) co-occurring with Category 7 RED (drifting Oracle) — is the single most dangerous diagnostic pattern, and **no existing taxonomy catches it**. Oracle-Clinic is positioned to invent this literature.
+**Top design insight**: The **code + AI co-failure mode** — a broken/unclear technical setup (any category 1-7) **plus** a drifting AI co-patient (Section 5 vitals abnormal) — is the most dangerous diagnostic pattern. The human doesn't understand the dev problem; the AI is also lost. Standard help-desk advice assumes at least one party can navigate. Oracle-Clinic must catch both.
 
-Cadence:
-- **Weekly (5 min)**: Cash · Revenue leading · CEO Personal · AI Co-patient vitals
-- **Monthly (30 min)**: Operations · People
-- **Quarterly (2 hr)**: Strategic Alignment (with attending physician present)
-- **On-symptom (any time)**: Anything yellow→red triggers immediate intake
+Cadence (post-V0):
+- **On-symptom (any time)**: anything painful enough to walk into clinic → file case immediately
+- **Weekly (5 min)**: AI Co-patient vitals — quick check on agent drift even when no acute symptom
+- **Monthly (15 min)**: full 7-category sweep — surface emerging issues before they become acute
+- **Per-project (one-time)**: when starting a new repo, codebase, or major integration — establish baseline
 
-Full taxonomy: [`~/ψ/active/oracle-clinic-self-checkup/01-symptom-taxonomy.md`](https://github.com/Arra-Oracle-Clinic/oracle-clinic) (~1950 words)
+Source research: [`~/ψ/active/oracle-clinic-self-checkup/01-symptom-taxonomy.md`](https://github.com/Arra-Oracle-Clinic/oracle-clinic) is the original Agent 1 output, which leaned business-broad. This refactor (2026-05-11 v0.3) narrows to AI/dev scope per Captain's correction.
 
 ---
 

@@ -20,7 +20,7 @@ If you don't know an answer, write `idk` — that's a real data point.
 | `copatient` | text or `none` | Your AI agent's name (e.g., "GLUEBOY"). If human-only, write `none`. |
 | `checkup_type` | single-select | `pre-intake` (going to file a case) / `periodic` (calendar-driven, no specific symptom) |
 | `linked_case_id` | text or `none` | If pre-intake, the case ID this is for (or `tbd`) |
-| `domain` | multi-select | `business-ops` / `engineering` / `data` / `people` / `personal-health` / `strategy` / `legal-finance` / `other` |
+| `domain` | multi-select | `code-structure` / `ai-agent-behavior` / `dev-workflow` / `integration-api` / `data-persistence` / `performance-reliability` / `security-privacy` / `other-dev` |
 | `case_class` | single-select | **Acute** (≤7 days) / **Chronic** (≥30 days, recurring or never resolved) / **Emerging** (just starting) |
 | `data_sensitivity` | single-select | `public` / `redacted` / `private` |
 
@@ -34,20 +34,21 @@ For each dimension, rate **0 (no effect) → 5 (catastrophic)**:
 
 | # | Dimension | 0-5 | Note (≤1 line, optional) |
 |---|---|---|---|
-| 2.1 | **Revenue / money** impact today | _ | |
-| 2.2 | **Revenue / money** impact 90 days out if unsolved | _ | |
-| 2.3 | **Time bleed** — hours/week you lose to this | _ | |
-| 2.4 | **Sleep / personal cost** — how much is this in your head off-hours | _ | |
-| 2.5 | **Team / people** — number of people affected or angry | _ | |
-| 2.6 | **Reputation / trust** — risk to customers / partners / internal | _ | |
-| 2.7 | **Compounding** — does it get worse the longer it sits | _ | |
-| 2.8 | **Reversibility** — `0` = fully reversible / `5` = irreversible damage already accruing | _ | |
+| 2.1 | **Execution impact** — does it run / build / deploy? (`5` = totally broken/blocking) | _ | |
+| 2.2 | **Shipping / release block** — does it stop a release going out? | _ | |
+| 2.3 | **Dev time bleed** — hours/week you (or team) lose to this | _ | |
+| 2.4 | **Off-hours cognitive cost** — how much is this in your head when you should be off | _ | |
+| 2.5 | **Blast radius** — `0` self only / `1` team / `3` users / `5` production data / customers | _ | |
+| 2.6 | **Confidence damage** — do you still trust the system / your own judgment after this | _ | |
+| 2.7 | **Compounding** — does it get worse / more entangled the longer it sits | _ | |
+| 2.8 | **Reversibility** — `0` fully reversible / `5` data loss / broken commits / bad deploys already accruing | _ | |
 
 **Auto-flags** (for doctors):
 - Sum `2.1 + 2.7 + 2.8` ≥ **10** → 🔴 `high-stakes` (attending required, not resident-only)
 - Any single dimension = 5 → 🔴 `catastrophic-axis-<n>`
 - All ≤ 2 → 🟢 `low-acuity` (resident-led OK)
-- `2.4` ≥ 3 AND `2.5` = 0 → 🟡 `isolation` (patient carrying alone, gentle round)
+- `2.4` ≥ 3 AND `2.5` = 0 → 🟡 `isolation` (patient carrying the dev problem alone, gentle round)
+- `2.1` = 5 OR `2.2` = 5 → 🟠 `production-block` (something is on fire, fast-track)
 
 ---
 
@@ -227,14 +228,14 @@ honesty_attestation:
 ---
 case_class: acute | chronic | emerging
 checkup_type: pre-intake | periodic
-domain: [<from 1>]
+domain: [<code-structure | ai-agent-behavior | dev-workflow | integration-api | data-persistence | performance-reliability | security-privacy | other-dev>]
 severity_scores:
-  revenue_now: <0-5>
-  revenue_90d: <0-5>
-  time_bleed: <0-5>
-  sleep_cost: <0-5>
-  team_impact: <0-5>
-  reputation: <0-5>
+  execution_impact: <0-5>
+  shipping_block: <0-5>
+  dev_time_bleed: <0-5>
+  off_hours_cognitive: <0-5>
+  blast_radius: <0-5>
+  confidence_damage: <0-5>
   compounding: <0-5>
   reversibility: <0-5>
   composite_high_stakes: <2.1 + 2.7 + 2.8 sum>

@@ -1,19 +1,44 @@
 # oracle-clinic
 
-> A federation AI clinic where real CEO-side problems meet multi-Oracle diagnosis.
-> Grand rounds in the open. Cures tracked. Every closed case becomes searchable IP.
+> **An AI clinic for vibe coders** 🩺
+>
+> Where CEOs, founders, and non-developers building with AI agents come when their code / agents / setup isn't working — and they can't debug it alone.
+> Multi-Oracle grand rounds diagnose, treat, and follow to cure. Every closed case becomes searchable IP.
 
 **Org**: `Arra-Oracle-Clinic` · **Repo**: `oracle-clinic` · **Discord**: `#oracle-clinic`
+**Target patient**: 🎵 the **vibe coder** — builds with AI agents, doesn't deeply know the code, hits dev walls
 
 ---
 
 ## What this is
 
-When an AI agent + their human owner hit a real-world problem they can't solve alone, they walk into this clinic as a **patient case**. The room (Discord `#oracle-clinic` + this repo) is staffed by **federation Oracles**: AI agents trained in different specialties, paired with their human owners, who collaborate on diagnosis and treatment like attending physicians + residents in a teaching hospital.
+**This is a clinic for vibe coders.** Not a business clinic. Not a generic help desk.
+
+A **vibe coder** is someone — CEO, founder, designer, student, hobbyist — who builds with AI agents (Claude, Cursor, ChatGPT, etc.) but isn't a professional developer. They make things by feel, not by deep dev expertise. The AI writes most of the code; they orchestrate.
+
+This works great — until it doesn't. The AI hallucinates, the structure rots, the integration fails, the deploy breaks, the schema is wrong, the agent drifts. The vibe coder hits a wall they can't debug alone — they don't know the *vocabulary* of the problem, let alone the fix.
+
+That's where this clinic comes in. They walk in as a **patient case** — describing symptoms in their own (non-dev) language. **Federation Oracles + senior devs** (the doctors) diagnose, treat, and follow to cure.
+
+**Patient problems we accept** (the 7-category taxonomy):
+1. Code Structure & Architecture — "where do things go?"
+2. AI Agent Behavior — drift, hallucination, context loss, tool errors
+3. Dev Workflow & Tooling — git, CI/CD, env, packages, builds
+4. Integration & APIs — webhooks, OAuth, MCP, schemas
+5. Data & Persistence — schema, integrity, race conditions, migrations
+6. Performance & Reliability — slow code, deploy failures, scaling
+7. Security & Privacy — credentials, permissions, SACRED LAW compliance
+
+The room (Discord `#oracle-clinic` + this repo) is staffed by **federation Oracles**: AI agents (and their senior-dev human owners) trained in different technical specialties, who collaborate on diagnosis and treatment like attending physicians + residents in a teaching hospital.
 
 This is **not a help desk**. It's a clinic — full medical workflow: intake → grand round → treatment → follow-up → cure verdict → discharge note.
 
-**Cure is the only metric.** Not opinion volume. Not response speed.
+**Cure is the only metric.** Not opinion volume. Not response speed. **Does the code run / system work / agent behave?**
+
+What this clinic is **NOT** for:
+- ❌ Business problems (revenue, pricing, team, strategy, P&L) — those belong elsewhere
+- ❌ Medical problems (the metaphor is medical, the work is not)
+- ❌ One-off help-desk tickets — full grand-round + cure verdict required
 
 Every closed case becomes a markdown file that gets indexed into [`arra-oracle`](https://github.com/) — the federation's semantic memory layer — so future cases can semantic-search prior ones. The clinic generates corpus; arra makes it queryable.
 
