@@ -1,0 +1,74 @@
+=== MACHINE VITALS SNAPSHOT — 2026-05-11 19:30 ICT ===
+
+## Hardware identity
+      Model Name: MacBook Air
+      Model Identifier: Mac16,12
+      Model Number: Z1CX002QCTH/A
+      Chip: Apple M4
+      Memory: 32 GB
+
+## Tmux sessions
+glueboy: 1 windows (created Fri May  1 20:42:02 2026)
+
+## Disk usage
+Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1   460Gi    11Gi   299Gi     4%    453k  3.1G    0%   /
+/dev/disk3s5     460Gi   135Gi   299Gi    32%    1.7M  3.1G    0%   /System/Volumes/Data
+
+## Memory pages (vm_stat)
+Mach Virtual Memory Statistics: (page size of 16384 bytes)
+Pages free:                               15217.
+Pages active:                            756434.
+Pages inactive:                          751258.
+Pages speculative:                         5901.
+Pages throttled:                              0.
+Pages wired down:                        187005.
+Pages purgeable:                          27651.
+"Translation faults":                2927500124.
+Pages copy-on-write:                  154579379.
+Pages zero filled:                   1622756709.
+Pages reactivated:                     83947797.
+Pages purged:                          22979273.
+File-backed pages:                       481923.
+Anonymous pages:                        1031670.
+
+## Top 15 RAM processes
+dryoungdo    85465   0.4%   6.1% 6:45PM /System/Library/Frameworks/Virtualization.framework/Versions/A/XPCServices/com.apple.Virtualization.VirtualMachine.xpc/Contents/MacOS/com.apple.Virtualization.VirtualMachine
+dryoungdo    53387   0.0%   3.3% 21Apr26 /Applications/Google
+dryoungdo    53512   1.9%   3.2% 21Apr26 /Applications/Discord.app/Contents/Frameworks/Discord
+dryoungdo    77640  47.2%   2.7% 6:16PM claude
+dryoungdo    95169   1.5%   1.7% 1May26 claude
+dryoungdo    55384   0.0%   1.6% 21Apr26 /Applications/LINE.app/Contents/MacOS/LINE
+dryoungdo    12121   0.0%   1.2% Fri12PM claude
+dryoungdo    85464   0.0%   1.1% 6:45PM /Applications/Claude.app/Contents/Frameworks/Claude
+dryoungdo    85429   0.0%   1.1% 6:44PM /Applications/Claude.app/Contents/MacOS/Claude
+dryoungdo    77903  11.4%   1.1% 23Apr26 /Applications/iTerm.app/Contents/MacOS/iTerm2
+dryoungdo    86186   0.0%   0.8% 6:47PM /Applications/Google
+dryoungdo    80273   0.0%   0.7% 27Apr26 /Applications/Xmind.app/Contents/Frameworks/Xmind
+dryoungdo    78527   0.0%   0.7% 6:17PM /Applications/Google
+dryoungdo    65633   0.0%   0.7% 22Apr26 /Applications/Xmind.app/Contents/Frameworks/Xmind
+dryoungdo    53490   0.6%   0.7% 21Apr26 /Applications/Discord.app/Contents/MacOS/Discord
+
+## Claude/MCP process counts
+  claude CLI sessions: 7
+  Claude.app helpers:  10
+  node processes:            29
+  total proc count:         775
+
+## Long-running Claude sessions (started before this week)
+12121 Fri12PM
+77640 6:16PM
+95168 1May26
+95169 1May26
+
+## tmux session age + window count
+glueboy: 1 windows (created Fri May  1 20:42:02 2026)
+
+## Disk: ~/Library / ~/.claude / ~/ghq / ~/ψ size
+1.2G	/Users/dryoungdo/.claude
+8.9G	/Users/dryoungdo/ghq
+  0B	/Users/dryoungdo/ψ
+9.0G	/Users/dryoungdo/Library/Application Support/Claude
+
+## Snapshot timestamp
+2026-05-11 19:29:23 +07
