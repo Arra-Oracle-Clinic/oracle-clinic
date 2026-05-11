@@ -16,6 +16,15 @@
 
 ---
 
+## Self-Checkup link (optional, recommended)
+
+- **Pre-intake self-checkup**: `<./self-checkup.md>` or `N/A`
+- **Self-triage verdict**: `🟢 GREEN` / `🟡 YELLOW` / `🟠 ORANGE` / `🔴 RED` (from Section 9 of checkup) or `N/A`
+
+If you did a [`Self-Checkup`](../../../TEMPLATES/self-checkup.md) before filing, link it here. Doctors will read it during History (step 2) to skip basic questions. If you skipped the checkup, that's OK — but consider it next time; richer signal = faster diagnosis.
+
+---
+
 ## Symptom
 
 > Describe the symptom in **your own domain language**. Don't pretend to be a developer if you aren't one. The doctors will translate.

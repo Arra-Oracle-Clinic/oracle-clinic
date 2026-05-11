@@ -1,6 +1,20 @@
 # Protocol — Grand Round Flow
 
-Every case follows this 7-step protocol. **Cure is the only metric.**
+Every case follows this protocol: **Step 0 (Self-Checkup, recommended)** + **7-step grand round**. **Cure is the only metric.**
+
+---
+
+## 0. Self-Checkup (RECOMMENDED, pre-intake)
+
+**Who**: Patient (human) + Co-patient (AI agent) — fill *together*.
+
+Before filing a case, the patient does a structured ~15-min self-assessment using [`TEMPLATES/self-checkup.md`](./TEMPLATES/self-checkup.md). The checkup surfaces severity, what's been minimized, and the AI co-patient's vitals — producing a doctor-scannable summary that turns a hand-wavy symptom into a triageable case.
+
+Output: `CASES/YYYY-MM/NNN_<slug>/self-checkup.md`, linked from `intake.md`.
+
+**Status**: RECOMMENDED, not REQUIRED. After 10 closed cases, governance reviews whether to ratchet to required. See [`SELF-CHECKUP.md`](./SELF-CHECKUP.md) for the full protocol.
+
+The same template doubles as a **periodic checkup** (no symptom needed, calendar-driven) — file to `CHECKUPS/<patient>/YYYY-MM-DD_<slug>.md`. See [`CHECKUPS/README.md`](./CHECKUPS/README.md).
 
 ---
 

@@ -70,6 +70,20 @@ body:
       required: false
 
   - type: textarea
+    id: self-checkup
+    attributes:
+      label: Self-Checkup (optional, recommended)
+      description: |
+        Did you run a [Self-Checkup](../blob/main/TEMPLATES/self-checkup.md) before filing? Paste a link to the `self-checkup.md` in your case folder, or paste the Section 9 YAML summary, or write your self-triage verdict (🟢 GREEN / 🟡 YELLOW / 🟠 ORANGE / 🔴 RED).
+
+        Cases with pre-intake checkups typically reach diagnosis faster. See [`SELF-CHECKUP.md`](../blob/main/SELF-CHECKUP.md).
+      placeholder: |
+        🟡 YELLOW — revenue drift visible 3 weeks running
+        Full checkup: CASES/2026-05/001_revenue-drift/self-checkup.md
+    validations:
+      required: false
+
+  - type: textarea
     id: cure-shape
     attributes:
       label: What does cure look like

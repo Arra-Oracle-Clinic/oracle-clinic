@@ -43,6 +43,7 @@ This document is **WIP at V0**. The clinic is just opening. We'll formalize as p
 | First request for paid consult | Compensation model |
 | First doctor needing removal | Removal process |
 | 10th closed case | Codify lessons into PROTOCOL.md V2 |
+| 10th closed case | Decide whether pre-intake Self-Checkup ratchets from RECOMMENDED → REQUIRED, based on cure-rate data (cases with checkup vs without) |
 
 ---
 

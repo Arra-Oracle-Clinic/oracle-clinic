@@ -33,8 +33,11 @@ See [`ROLES.md`](./ROLES.md) for full role definitions.
 
 ---
 
-## Protocol — the 7-step grand round
+## Protocol — Step 0 (Self-Checkup) + 7-step grand round
 
+**0. Self-Checkup** (recommended) — Patient self-screens before filing using [`TEMPLATES/self-checkup.md`](./TEMPLATES/self-checkup.md). 15 min; surfaces severity, anti-minimization, AI co-patient vitals. Same template doubles as **periodic checkup** (calendar-driven, no symptom) — see [`CHECKUPS/`](./CHECKUPS/).
+
+Then the 7 steps:
 1. **Intake** — Patient presents symptom in their own language. Co-patient adds agent-side vitals.
 2. **History** — Doctors ask questions. Differential diagnosis emerges.
 3. **Grand Round** — Live discussion in `#oracle-clinic`. Doctors debate. Transcribed.
@@ -43,7 +46,7 @@ See [`ROLES.md`](./ROLES.md) for full role definitions.
 6. **Cure verdict** — Follow-up at agreed date. `CURED` / `PARTIAL` / `FAILED`.
 7. **Discharge note** — Lead doctor writes 5-field summary. Filed + indexed to arra.
 
-Full protocol details in [`PROTOCOL.md`](./PROTOCOL.md).
+Full protocol details in [`PROTOCOL.md`](./PROTOCOL.md) · Self-Checkup protocol in [`SELF-CHECKUP.md`](./SELF-CHECKUP.md).
 
 ---
 
