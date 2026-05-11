@@ -8,12 +8,12 @@ For symptom-driven pre-intake checkups, see `CASES/YYYY-MM/NNN_<slug>/self-check
 
 ## What lives here
 
-Standalone periodic checkups that aren't tied to any specific case. Patients do these to:
+Standalone periodic checkups that aren't tied to any specific case. Patients (vibe coders) do these to:
 
-- Surface emerging symptoms BEFORE they become acute cases
-- Track trends across the 7-category symptom taxonomy (Cash · Revenue · Operations · People · Strategic · CEO Personal · AI Co-patient)
+- Surface emerging technical symptoms BEFORE they become acute cases
+- Track trends across the 7-category dev symptom taxonomy (Code Structure · AI Agent Behavior · Dev Workflow · Integration & APIs · Data & Persistence · Performance & Reliability · Security & Privacy)
 - Build a longitudinal record for arra-indexed retrieval
-- Practice the discipline of looking at vitals on a cadence
+- Practice the discipline of looking at vitals on a cadence (especially AI co-patient drift, which compounds silently)
 
 ---
 
@@ -45,10 +45,11 @@ CHECKUPS/
 
 ## Cadence guidance (patient-owned, not enforced)
 
-The taxonomy recommends:
-- **Weekly (5 min)** — Categories 1, 2-leading, 6, 7 (Cash · Revenue leading · CEO Personal · AI Co-patient)
-- **Monthly (30 min)** — Operations · People
-- **Quarterly (2 hr)** — Strategic Alignment (with attending physician present)
+Suggested cadences for vibe coders:
+- **Weekly (5 min)** — AI Co-patient vitals (Section 5) only. Quick check on agent drift.
+- **Monthly (15 min)** — Full 7-category sweep. Surface emerging issues before they go acute.
+- **Per-project (one-time)** — When starting a new repo, codebase, or major integration. Establish baseline.
+- **On-symptom (any time)** — Skip to filing a case. Self-Checkup not required when something is on fire.
 
 Patients pick their own pace. The clinic provides the template + indexing; the patient provides the cadence.
 
